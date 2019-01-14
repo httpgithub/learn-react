@@ -7,7 +7,7 @@ export default class LoginPage extends Component {
   render() {
     return (
       <div>
-        <h1>login Page</h1>
+        <h1>login  Page</h1>
         <LoginForm submit={this.submit} />
       </div>
     );
