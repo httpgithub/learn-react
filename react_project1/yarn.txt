@@ -9,3 +9,5 @@
 
 
 https://blog.fundebug.com/2018/08/22/art-of-debugging-with-chrome-devtools/
+https://medium.freecodecamp.org/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6?gi=37486354231f
+https://juejin.im/post/5acf1014518825485153819a
