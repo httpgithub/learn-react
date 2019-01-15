@@ -25,6 +25,7 @@ LoginPage.propTypes = {
   login: PropTypes.func.isRequired
 };
 
+/* 返回的是pojo 对象
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     login: (...user) =>{
@@ -36,6 +37,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
   };
 };
+*/
 
 export default connect(
   null,
