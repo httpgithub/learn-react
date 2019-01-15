@@ -11,3 +11,9 @@
 https://blog.fundebug.com/2018/08/22/art-of-debugging-with-chrome-devtools/
 https://medium.freecodecamp.org/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6?gi=37486354231f
 https://juejin.im/post/5acf1014518825485153819a
+https://segmentfault.com/a/1190000014549632
+https://imweb.io/topic/5a086f53ef79bc941c30d8d5
+https://www.jianshu.com/p/6e76b783abf2
+https://segmentfault.com/a/1190000010731933
+https://medium.com/@danielkagan/how-to-write-your-own-pipe-function-in-js-da7d1a3e2a2a
+http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html
