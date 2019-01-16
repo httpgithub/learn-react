@@ -28,3 +28,6 @@ https://www.slideshare.net/nikgraf/redux-universal
 https://medium.com/@lavitr01051977/basic-react-redux-app-with-async-call-to-api-e478e6e0c48b
 https://medium.com/@lavitr01051977/basic-react-redux-app-with-async-call-to-api-e478e6e0c48b
 https://tylermcginnis.com/react-router-protected-routes-authentication/
+https://zhengzexin.com/2016/09/17/yong-youtube-dl-xia-zai-you-guan-shi-pin
+https://segmentfault.com/a/1190000015261229
+https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000

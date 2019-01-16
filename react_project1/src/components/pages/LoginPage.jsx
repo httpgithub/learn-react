@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import axios from "axios";
-import { userLoggedIn } from "../../actions/auth";
+import { userLoggedIn, login } from "../../actions/auth";
 
 class LoginPage extends Component {
   submit = data => {
@@ -43,7 +43,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 */
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+/* const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     login: user => {
       console.info(user);
@@ -53,9 +53,22 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         .then(res => dispatch(userLoggedIn(res)));
     }
   };
+}; */
+
+/* 
+可以简化为格式:export default connect( null, {login} )(LoginPage);
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    login: login
+  };
 };
 
 export default connect(
   null,
   mapDispatchToProps
+)(LoginPage); */
+
+export default connect(
+  null,
+  { login }
 )(LoginPage);
