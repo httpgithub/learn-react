@@ -8,9 +8,14 @@ import { userLoggedIn, login } from "../../actions/auth";
 class LoginPage extends Component {
   submit = data => {
     //this.props.login(data).then(() => this.props.history.push("/"));
-    this.props.login(data).then(() => {
-      this.props.history.push("/");
-    }); //调用login方法 参数是data 方法的定义通过mapDispatchToProps login 定义
+    return this.props
+      .login(data)
+      .then(resp => {
+        console.info("LoginPage:" + resp);
+      })
+      .then(() => {
+        this.props.history.push("/");
+      }); //调用login方法 参数是data 方法的定义通过mapDispatchToProps login 定义
   };
   render() {
     return (

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Icon, Input, Button } from "antd";
+import { Form, Icon, Input, Button, Spin } from "antd";
 import InlineError from "../messages/InlineError";
 import PropTypes from "prop-types";
 
@@ -22,7 +22,22 @@ export default class LoginForm extends Component {
     const errors = this.validate(this.state.data);
     this.setState({ errors });
     if (Object.keys(errors).length === 0) {
-      this.props.submit(this.state.data);
+      this.setState({ loading: true });
+      //this.props.submit(this.state.data).then(resp => console.info("LoginForm:"+resp)).catch(error => console.info(error));
+      console.info("this.props.submit:" + typeof this.props.submit);
+      var temp = this.props
+        .submit(this.state.data)
+        .then(resp => {
+          console.info("LoginForm:" + resp);
+        })
+        .catch(error => {
+          console.info("LoginForm:error" + error);
+          this.setState({
+            errors: { global: error.statusText || error },
+            loading: false
+          });
+        });
+      console.info("this.props.submit(this.state.data):" + typeof temp);
     }
   };
   validate = data => {
@@ -36,11 +51,13 @@ export default class LoginForm extends Component {
     return errors;
   };
   render() {
-    const { data, errors } = this.state;
+    const { data, errors, loading } = this.state;
     return (
       <div>
+        {loading && <Spin />}
         <Form onSubmit={this.onSubmit}>
           <Form.Item>
+            {errors.global && <InlineError text={errors.global} />}
             <Input
               prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
               placeholder="username"
@@ -72,5 +89,5 @@ export default class LoginForm extends Component {
   }
 }
 LoginForm.propTypes = {
-    submit:PropTypes.func.isRequired
+  submit: PropTypes.func.isRequired
 };
