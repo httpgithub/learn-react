@@ -27,3 +27,4 @@ http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html
 https://www.slideshare.net/nikgraf/redux-universal
 https://medium.com/@lavitr01051977/basic-react-redux-app-with-async-call-to-api-e478e6e0c48b
 https://medium.com/@lavitr01051977/basic-react-redux-app-with-async-call-to-api-e478e6e0c48b
+https://tylermcginnis.com/react-router-protected-routes-authentication/
