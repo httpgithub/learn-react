@@ -17,4 +17,6 @@ public class UserResultDto {
 	private String returnCode;
 
 	private String returnMessage;
+
+	private String jwt;
 }
