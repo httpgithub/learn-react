@@ -14,7 +14,7 @@ class LoginPage extends Component {
         console.info("LoginPage:" + resp);
       })
       .then(() => {
-        this.props.history.push("/");
+        this.props.history.push("/dashboard");
       }); //调用login方法 参数是data 方法的定义通过mapDispatchToProps login 定义
   };
   render() {

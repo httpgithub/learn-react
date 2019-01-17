@@ -35,3 +35,7 @@ axios https://www.jianshu.com/p/d6796986e2ab
 promise  https://juejin.im/post/5b605b035188251a90189c61
 https://jixianqianduan.com/frontend-weboptimize/2018/02/22/front-end-react-error-capture.html
 https://blog.benestudio.co/5-ways-to-connect-redux-actions-3f56af4009c8
+
+完整例子http://jasonwatmore.com/post/2017/12/07/react-redux-jwt-authentication-tutorial-example
+
+emmet http://bubkoo.com/2014/01/04/emmet-a-toolkit-for-improving-html-css-workflow/#undefined

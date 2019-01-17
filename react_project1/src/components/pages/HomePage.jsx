@@ -21,7 +21,7 @@ class HomePage extends Component {
 
 function mapStateToProps(state) {
   return {
-    isAuthenticated: state.user.jwt
+    isAuthenticated: !!state.user.jwt
   };
 }
 
@@ -30,6 +30,6 @@ export default connect(
   { logout: actions.logout }
 )(HomePage);
 HomePage.propTypes = {
-  isAuthenticated: PropTypes.string.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired,
   logout: PropTypes.func.isRequired
 };
