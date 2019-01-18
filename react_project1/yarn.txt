@@ -39,3 +39,11 @@ https://blog.benestudio.co/5-ways-to-connect-redux-actions-3f56af4009c8
 完整例子http://jasonwatmore.com/post/2017/12/07/react-redux-jwt-authentication-tutorial-example
 
 emmet http://bubkoo.com/2014/01/04/emmet-a-toolkit-for-improving-html-css-workflow/#undefined
+
+函数组件和类组件:https://www.jianshu.com/p/028b0edfa082
+
+高阶组件+route:  https://www.prisma.io/forum/t/react-hoc-to-check-for-authorized-user-protected-routes/478/9
+
+
+权限控制:
+https://www.jianshu.com/p/1a5ba1731474
