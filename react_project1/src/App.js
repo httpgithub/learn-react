@@ -5,15 +5,18 @@ import LoginPage from "./components/pages/LoginPage";
 import DashboardPage from "./components/pages/DashboardPage";
 import SignupPage from "./components/pages/SignupPage";
 import ConfirmationPage from "./components/pages/ConfirmationPage";
+import TopNavigation from "./components/navigation/TopNavigation";
 import "antd/dist/antd.css";
 import UserRoute from "./routes/UserRoute";
 import GuestRoute from "./routes/GuestRoute";
 import PropTypes from "prop-types";
+import { Layout } from 'antd';
 class App extends Component {
   render() {
     return (
+      <Layout>
       <div className="App">
-      
+      <TopNavigation></TopNavigation>
         <Route
           location={this.props.location}
           path="/"
@@ -46,6 +49,7 @@ class App extends Component {
           component={DashboardPage}
         />
       </div>
+      </Layout>
     );
   }
 }
