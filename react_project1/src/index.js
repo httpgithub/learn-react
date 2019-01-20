@@ -9,6 +9,7 @@ import thunk from "redux-thunk";
 import rootReducer from "./rootReducer";
 import { userLoggedIn } from "./actions/auth";
 import { composeWithDevTools } from "redux-devtools-extension";
+import decode from "jwt-decode";
 
 const store = createStore(
   rootReducer,
@@ -16,14 +17,17 @@ const store = createStore(
 );
 
 if (localStorage.getItem("jwt")) {
-  const user = { jwt: localStorage.getItem("jwt") };
+  const payload = decode(localStorage.getItem("jwt"));
+  const sub = JSON.parse(payload.sub);
+  const user = { jwt: localStorage.getItem("jwt"),confirmed:sub.confirmed,email:sub.email };
   store.dispatch(userLoggedIn(user));
 }
 
 ReactDOM.render(
   <Router>
     <Provider store={store}>
-      <App />
+      {/* redirect 无效 https://stackoverflow.com/questions/42875949/react-router-v4-redirect-not-working */}
+      <Route component={App} />
     </Provider>
   </Router>,
   document.getElementById("root")

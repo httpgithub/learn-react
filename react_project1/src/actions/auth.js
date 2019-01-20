@@ -7,6 +7,9 @@ export const userLoggedIn = user => ({
 export const userLoggedOut = () => ({
   type: USER_LOGGED_OUT
 });
+export const user = () => ({
+  type: USER_LOGGED_OUT
+});
 export const login = credentials => dispatch =>
   api.user
     .login(credentials)
@@ -25,4 +28,11 @@ export const login = credentials => dispatch =>
 export const logout = () => dispatch => {
   localStorage.removeItem("jwt");
   dispatch(userLoggedOut());
+};
+
+export const confirm = confirmationToken => dispatch => {
+  return api.user.confirm(confirmationToken).then(user=>{
+    localStorage.setItem("jwt", user.data.jwt);
+    dispatch(userLoggedIn(user.data));
+  });
 };

@@ -12,7 +12,7 @@ class HomePage extends Component {
         {this.props.isAuthenticated ? (
           <Button onClick={() => this.props.logout()}>退出</Button>
         ) : (
-          <Link to="/login">login</Link>
+          <div><Link to="/login">login</Link> or <Link to="/signup">sign up</Link></div>
         )}
       </div>
     );

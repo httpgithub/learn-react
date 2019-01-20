@@ -18,6 +18,7 @@ export default {
 
       //   return axios.post("/api/auth", credentials);
       // }
-      axios.post("/api/auth", credentials)
+      axios.post("/api/auth", credentials),
+    confirm: confirmationToken => axios.post("/api/confirm", confirmationToken)
   }
 };

@@ -13,7 +13,7 @@ DashboardPage.propTypes = {
 };
 function mapStateToProps(state) {
   return {
-    isConfirmed: !!state.user.Confirmed
+    isConfirmed: !!state.user.confirmed
   };
 }
 export default connect(mapStateToProps)(DashboardPage);

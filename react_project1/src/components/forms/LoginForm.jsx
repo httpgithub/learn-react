@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export default class LoginForm extends Component {
   state = {
     data: {
-      username: "",
+      email: "",
       password: ""
     },
     loading: false,
@@ -42,8 +42,8 @@ export default class LoginForm extends Component {
   };
   validate = data => {
     const errors = {};
-    if (!data.username) {
-      errors.username = "用户名不能为空";
+    if (!data.email) {
+      errors.email = "用户名不能为空";
     }
     if (!data.password) {
       errors.password = "密码不能为空";
@@ -60,12 +60,12 @@ export default class LoginForm extends Component {
             {errors.global && <InlineError text={errors.global} />}
             <Input
               prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
-              placeholder="username"
-              name="username"
-              value={data.username}
+              placeholder="email"
+              name="email"
+              value={data.email}
               onChange={this.onChange}
             />
-            {errors.username && <InlineError text={errors.username} />}
+            {errors.email && <InlineError text={errors.email} />}
           </Form.Item>
           <Form.Item>
             <Input

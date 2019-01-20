@@ -19,4 +19,6 @@ public class UserResultDto {
 	private String returnMessage;
 
 	private String jwt;
+
+	private boolean confirmed=false;
 }
