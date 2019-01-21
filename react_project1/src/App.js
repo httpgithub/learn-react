@@ -5,6 +5,7 @@ import LoginPage from "./components/pages/LoginPage";
 import DashboardPage from "./components/pages/DashboardPage";
 import SignupPage from "./components/pages/SignupPage";
 import ConfirmationPage from "./components/pages/ConfirmationPage";
+import NewBookPage from "./components/pages/NewBookPage";
 import TopNavigation from "./components/navigation/TopNavigation";
 import "antd/dist/antd.css";
 import UserRoute from "./routes/UserRoute";
@@ -48,6 +49,11 @@ class App extends Component {
             location={this.props.location}
             path="/dashboard"
             component={DashboardPage}
+          />
+          <UserRoute
+            location={this.props.location}
+            path="/books/new"
+            component={NewBookPage}
           />
         </div>
       </Layout>
