@@ -71,3 +71,4 @@ https://javadeveloperzone.com/spring-boot/spring-boot-liquibase-example/
 https://javadeveloperzone.com/spring-boot/spring-boot-liquibase-example/
 https://segmentfault.com/a/1190000016641122
 https://www.baeldung.com/liquibase-refactor-schema-of-java-app
+https://www.huangyunkun.com/2017/03/16/database-tools-flywayt-vs-liquibase/
