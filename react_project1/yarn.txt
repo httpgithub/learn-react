@@ -47,3 +47,18 @@ emmet http://bubkoo.com/2014/01/04/emmet-a-toolkit-for-improving-html-css-workfl
 
 权限控制:
 https://www.jianshu.com/p/1a5ba1731474
+
+reselect: https://juejin.im/post/5a04825b6fb9a0450f216459
+https://medium.com/@TomasEhrlich/use-selectors-in-redux-for-great-good-59286ce2e2a1
+
+https://www.jianshu.com/p/d1ef832e8e65
+
+
+
+
+https://www.zcfy.cc/article/five-tips-for-working-with-redux-in-large-applications
+
+环境配置:https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5
+
+
+https://zhongsp.gitbooks.io/typescript-handbook/doc/handbook/Interfaces.html
