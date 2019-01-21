@@ -62,3 +62,12 @@ https://www.zcfy.cc/article/five-tips-for-working-with-redux-in-large-applicatio
 
 
 https://zhongsp.gitbooks.io/typescript-handbook/doc/handbook/Interfaces.html
+https://juejin.im/post/5b07caf16fb9a07aa83f2977
+https://levelup.gitconnected.com/typescript-and-react-using-create-react-app-a-step-by-step-guide-to-setting-up-your-first-app-6deda70843a4
+
+
+
+https://javadeveloperzone.com/spring-boot/spring-boot-liquibase-example/
+https://javadeveloperzone.com/spring-boot/spring-boot-liquibase-example/
+https://segmentfault.com/a/1190000016641122
+https://www.baeldung.com/liquibase-refactor-schema-of-java-app
