@@ -1,6 +1,7 @@
 import React from "react";
 import { Empty, Button } from "antd";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import SearchBookForm from "../forms/SearchBookForm";
 const AddBookCtA = () => {
   return (
     <Empty
@@ -11,7 +12,9 @@ const AddBookCtA = () => {
         </span>
       }
     >
-      <Link to="/books/new"><Button type="primary">add books</Button></Link>  
+      <Link to="/books/new">
+        <SearchBookForm />
+      </Link>
     </Empty>
   );
 };
