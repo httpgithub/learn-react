@@ -13,7 +13,7 @@ const AddBookCtA = () => {
       }
     >
       <Link to="/books/new">
-        <SearchBookForm />
+        <button>add book</button>
       </Link>
     </Empty>
   );
