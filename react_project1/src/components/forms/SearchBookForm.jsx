@@ -18,8 +18,10 @@ export default class SearchBookForm extends Component {
   };
 
   handleSearch=(value) =>{
-    Axios.get(`/api/books/search&q=${value}`).then(data =>{
-      console.info(data);
+    Axios.get(`/api/books/search?q=${value}`).then(data =>{
+     
+      const tmp = data.data.map(d=>({title:d.title,imageUrl:d.image_url}));
+      this.setState({...this.state,dataSource:tmp});
     });
   }
 

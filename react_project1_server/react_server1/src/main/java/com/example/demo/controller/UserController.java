@@ -26,7 +26,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api")
 @Slf4j
 public class UserController {
     @Autowired
