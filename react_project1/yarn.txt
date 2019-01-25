@@ -98,3 +98,4 @@ yield :https://stackoverflow.com/questions/37354461/how-does-generator-next-proc
 https://zhuanlan.zhihu.com/p/37356948
 https://zhuanlan.zhihu.com/p/37356948
 https://www.jianshu.com/p/715eb01f6a5f
+客户端存储:https://blog.csdn.net/xianda9133/article/details/70155835

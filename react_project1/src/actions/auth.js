@@ -1,5 +1,6 @@
 import { USER_LOGGED_IN, USER_LOGGED_OUT } from "../types";
 import api from "../api";
+import setAuthorizationHeader from "../utils/setAuthorizationHeader";
 export const userLoggedIn = user => ({
   type: USER_LOGGED_IN,
   user
@@ -17,7 +18,7 @@ export const login = credentials => dispatch =>
       if (user.data.returnCode === "000000") {
         //localStorage.jwt = user.data.jwt;
         localStorage.setItem("jwt", user.data.jwt);
-
+        setAuthorizationHeader(user.data.jwt);
         return user.data;
       } else {
         return Promise.reject(user.data.returnMessage);
@@ -27,6 +28,7 @@ export const login = credentials => dispatch =>
 
 export const logout = () => dispatch => {
   localStorage.removeItem("jwt");
+  setAuthorizationHeader();
   dispatch(userLoggedOut());
 };
 

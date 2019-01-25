@@ -10,6 +10,7 @@ import rootReducer from "./rootReducer";
 import { userLoggedIn } from "./actions/auth";
 import { composeWithDevTools } from "redux-devtools-extension";
 import decode from "jwt-decode";
+import setAuthorizationHeader from "./utils/setAuthorizationHeader";
 
 const store = createStore(
   rootReducer,
@@ -20,6 +21,9 @@ if (localStorage.getItem("jwt")) {
   const payload = decode(localStorage.getItem("jwt"));
   const sub = JSON.parse(payload.sub);
   const user = { jwt: localStorage.getItem("jwt"),confirmed:sub.confirmed,email:sub.email };
+
+  //页面每次重新加载是都会走index.js
+  setAuthorizationHeader(localStorage.jwt);
   store.dispatch(userLoggedIn(user));
 }
 
