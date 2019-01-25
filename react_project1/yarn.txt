@@ -53,7 +53,7 @@ https://medium.com/@TomasEhrlich/use-selectors-in-redux-for-great-good-59286ce2e
 
 https://www.jianshu.com/p/d1ef832e8e65
 
-
+https://www.jianshu.com/p/61fe7a57fad4
 
 
 https://www.zcfy.cc/article/five-tips-for-working-with-redux-in-large-applications
@@ -80,3 +80,21 @@ antd 解析 :https://segmentfault.com/a/1190000014916606
 jp2bdvea@mail.bccto.me/jp2bdvea
 key: JONkecpSbGjMjI0fCx6xYA
 secret: ELSKFBWbzNh4lJx0QqrP2PmzOq6MS25app5inJEmb7I
+
+
+
+
+
+es5:http://taobaofed.org/blog/2016/11/03/es6-advanced/
+http://taobaofed.org/blog/2016/11/17/react-components-communication/
+http://taobaofed.org/blog/2016/11/17/react-components-communication/
+
+https://segmentfault.com/a/1190000003021261
+
+
+
+yield :https://stackoverflow.com/questions/37354461/how-does-generator-next-processes-its-parameter
+
+https://zhuanlan.zhihu.com/p/37356948
+https://zhuanlan.zhihu.com/p/37356948
+https://www.jianshu.com/p/715eb01f6a5f

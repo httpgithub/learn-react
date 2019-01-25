@@ -1,3 +1,2 @@
-"use strict";
-var t = 1;
-console.info(t);
+var person = { name: "Remo", age: "28" };
+console.info(typeof person);
