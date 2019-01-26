@@ -23,7 +23,7 @@ export default {
   },
   books:{
     fetchAll:email =>{
-      return axios.get(`/api/books/fetchAll?email=${email}`).then(resp=>console.info(resp));
+      return axios.get(`/api/books/fetchAll?email=${email}`).then(resp=>resp.data);
     }
   }
 };

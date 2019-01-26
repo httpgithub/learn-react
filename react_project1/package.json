@@ -10,6 +10,7 @@
     "antd": "^3.12.3",
     "axios": "^0.18.0",
     "jwt-decode": "^2.2.0",
+    "normalizr": "^3.3.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
