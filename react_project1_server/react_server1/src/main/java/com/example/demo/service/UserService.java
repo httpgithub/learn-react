@@ -1,6 +1,6 @@
-package com.example.demo.controller.service;
+package com.example.demo.service;
 
-import com.example.demo.controller.dao.model.User;
+import com.example.demo.dao.model.User;
 import com.example.demo.controller.vm.LoginVM;
 import com.example.demo.controller.vm.SignupUserParamDto;
 import com.example.demo.controller.vm.SignupUserResultDto;

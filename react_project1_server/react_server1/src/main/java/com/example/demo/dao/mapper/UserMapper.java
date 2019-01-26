@@ -1,7 +1,7 @@
-package com.example.demo.controller.dao.mapper;
+package com.example.demo.dao.mapper;
 
-import com.example.demo.controller.dao.model.User;
-import com.example.demo.controller.dao.model.UserExample;
+import com.example.demo.dao.model.User;
+import com.example.demo.dao.model.UserExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

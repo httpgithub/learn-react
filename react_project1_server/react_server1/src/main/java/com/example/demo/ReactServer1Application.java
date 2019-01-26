@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication(scanBasePackages = "com.example.demo")
 @EnableTransactionManagement(mode = AdviceMode.ASPECTJ)
-@MapperScan("com.example.demo.controller.dao.mapper")
+@MapperScan("com.example.demo.dao.mapper")
 public class ReactServer1Application {
 
     public static void main(String[] args) {

@@ -20,5 +20,10 @@ export default {
       // }
       axios.post("/api/auth", credentials),
     confirm: confirmationToken => axios.post("/api/confirm", confirmationToken)
+  },
+  books:{
+    fetchAll:email =>{
+      return axios.get(`/api/books/fetchAll?email=${email}`).then(resp=>console.info(resp));
+    }
   }
 };

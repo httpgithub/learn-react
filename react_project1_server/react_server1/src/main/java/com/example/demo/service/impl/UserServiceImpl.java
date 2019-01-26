@@ -1,9 +1,9 @@
-package com.example.demo.controller.service.impl;
+package com.example.demo.service.impl;
 
-import com.example.demo.controller.dao.mapper.UserMapper;
-import com.example.demo.controller.dao.model.User;
-import com.example.demo.controller.dao.model.UserExample;
-import com.example.demo.controller.service.UserService;
+import com.example.demo.dao.mapper.UserMapper;
+import com.example.demo.dao.model.User;
+import com.example.demo.dao.model.UserExample;
+import com.example.demo.service.UserService;
 import com.example.demo.controller.vm.LoginVM;
 import com.example.demo.controller.vm.SignupUserParamDto;
 import com.example.demo.controller.vm.SignupUserResultDto;
