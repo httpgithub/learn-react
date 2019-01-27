@@ -19,7 +19,16 @@ export default {
       //   return axios.post("/api/auth", credentials);
       // }
       axios.post("/api/auth", credentials),
-    confirm: confirmationToken => axios.post("/api/confirm", confirmationToken)
+    confirm: confirmationToken => axios.post("/api/confirm", confirmationToken),
+    fetchCurrentUser: () =>
+      axios.get("/api/users/currentUser").then(resp => resp.data).then(data =>{
+        return {
+          user:{
+            email:data.email,
+            confirmed:!!data.email
+          }
+        }
+      })
   },
   books: {
     fetchAll: email => {

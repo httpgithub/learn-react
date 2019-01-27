@@ -107,3 +107,6 @@ redux的内容还有immutable.js,normalize,reselect
 
 https://github.com/paularmstrong/normalizr
 https://github.com/paularmstrong/normalizr
+
+
+https://trello.com/

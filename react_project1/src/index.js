@@ -11,6 +11,7 @@ import { userLoggedIn } from "./actions/auth";
 import { composeWithDevTools } from "redux-devtools-extension";
 import decode from "jwt-decode";
 import setAuthorizationHeader from "./utils/setAuthorizationHeader";
+import {userFetched} from "./actions/users"
 
 const store = createStore(
   rootReducer,
@@ -25,6 +26,8 @@ if (localStorage.getItem("jwt")) {
   //页面每次重新加载是都会走index.js
   setAuthorizationHeader(localStorage.jwt);
   store.dispatch(userLoggedIn(user));
+}else{
+  store.dispatch(userFetched({}));
 }
 
 ReactDOM.render(

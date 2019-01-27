@@ -5,12 +5,12 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.interfaces.JWTVerifier;
-import com.example.demo.dao.model.User;
-import com.example.demo.service.UserService;
 import com.example.demo.controller.vm.LoginVM;
 import com.example.demo.controller.vm.SignupUserParamDto;
 import com.example.demo.controller.vm.SignupUserResultDto;
 import com.example.demo.controller.vm.UserResultDto;
+import com.example.demo.dao.model.User;
+import com.example.demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +18,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -63,6 +64,13 @@ public class UserController {
         return signupUserResultDto;
     }
 
+    @RequestMapping("/users/currentUser")
+    public User currentUser(@RequestHeader("authorization") String authorization) {
+        DecodedJWT jwt = UserController.decode(authorization.split(" ")[1]);
+        String email = JSON.parseObject(jwt.getSubject()).get("email")+"";
+       return userService.getUserByemail(email);
+    }
+
     @RequestMapping("/confirm")
     public SignupUserResultDto confirm(@RequestBody String confirmationToken) {
         SignupUserResultDto signupUserResultDto = new SignupUserResultDto();
@@ -71,7 +79,6 @@ public class UserController {
         signupUserResultDto.setJwt(getJwtToken(JSON.parseObject(jwt.getSubject()).get("email")+"",true));
         return signupUserResultDto;
     }
-
 
     public static String getJwtToken(String email, boolean confirmed) {
         Map<String, Object> h = new HashMap<>();

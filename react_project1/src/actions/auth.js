@@ -24,7 +24,7 @@ export const login = credentials => dispatch =>
         return Promise.reject(user.data.returnMessage);
       }
     })
-    .then(user => dispatch(userLoggedIn(user)));
+    .then(user => dispatch(userLoggedIn({...user,loaded:true})));
 
 export const logout = () => dispatch => {
   localStorage.removeItem("jwt");
