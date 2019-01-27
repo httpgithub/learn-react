@@ -11,3 +11,5 @@ export const fetchBooks = email => dispatch => {
     .fetchAll(email)
     .then(books => dispatch(booksFetched(normalize(books, [bookSchema]))));
 };
+
+export const createBook = book => dispatch =>api.books.createBook(book);

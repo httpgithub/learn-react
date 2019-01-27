@@ -93,7 +93,7 @@ public class UserController {
 
     }
 
-    public DecodedJWT decode(String token) {
+    public static DecodedJWT decode(String token) {
         DecodedJWT jwt = JWT.decode(token);
         return jwt;
     }

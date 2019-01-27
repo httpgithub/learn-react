@@ -50,4 +50,11 @@ public class UserServiceImpl implements UserService {
             return signupUserResultDto;
         }
     }
+
+    @Override
+    public User getUserByemail(String email){
+        UserExample userExample = new UserExample();
+        userExample.createCriteria().andEmailEqualTo(email);
+        return userMapper.selectByExample(userExample).get(0);
+    }
 }

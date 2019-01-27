@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Form, Input, Card,Button } from "antd";
+import { Form, Input, Card, Button } from "antd";
 import PropTypes from "prop-types";
 export default class BookForm extends Component {
   static propTypes = {
     book: PropTypes.shape({
       title: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    addBook:PropTypes.func.isRequired
   };
   state = {
     data: {
@@ -17,11 +18,15 @@ export default class BookForm extends Component {
   componentWillReceiveProps(props) {
     this.setState({ ...this.state, data: props.book });
   }
+  onSubmit = e => {
+    e.preventDefault();
+    this.props.addBook(this.state.data);
+  };
   render() {
     const { data } = this.state;
     return (
       <div>
-        <Form>
+        <Form onSubmit={this.onSubmit}>
           <Form.Item>
             <Input placeholder="Book Title" value={data.title} />
           </Form.Item>

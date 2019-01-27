@@ -9,4 +9,6 @@ public interface UserService {
     User login(LoginVM loginVM) throws Exception;
 
     SignupUserResultDto signup(SignupUserParamDto SignupUserParamDto);
+
+    User getUserByemail(String email);
 }

@@ -7,6 +7,7 @@ import com.example.demo.dao.model.BookExample;
 import com.example.demo.dao.model.User;
 import com.example.demo.dao.model.UserExample;
 import com.example.demo.service.BookService;
+import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,8 @@ public class BookServiceImpl implements BookService {
     private BookMapper bookMapper;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private UserService userService;
 
     @Override
     public List<Book> getBooksByEmail(String email) {
@@ -27,5 +30,12 @@ public class BookServiceImpl implements BookService {
         BookExample bookExample = new BookExample();
         bookExample.createCriteria().andUserIdEqualTo(userList.get(0).getId() + "");
         return bookMapper.selectByExample(bookExample);
+    }
+
+    @Override
+    public void saveBook(String email, Book book) {
+        User user = userService.getUserByemail(email);
+        book.setUserId(user.getId() + "");
+        bookMapper.insertSelective(book);
     }
 }

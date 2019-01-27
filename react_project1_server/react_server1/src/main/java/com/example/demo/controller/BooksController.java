@@ -3,15 +3,13 @@ package com.example.demo.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.example.demo.config.HttpClientConfig;
 import com.example.demo.dao.model.Book;
 import com.example.demo.service.BookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -72,4 +70,17 @@ public class BooksController {
     public List<Book> getBooksByEmail(@RequestParam String email) {
         return bookService.getBooksByEmail(email);
     }
+
+    @RequestMapping("/createBook")
+    public JSONObject createBook(@RequestBody Book book,@RequestHeader("authorization") String authorization) {
+        DecodedJWT jwt = UserController.decode(authorization.split(" ")[1]);
+        String email = JSON.parseObject(jwt.getSubject()).get("email")+"";
+        bookService.saveBook(email,book);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("returnCode", "000000");
+        jsonObject.put("returnMessage", "success");
+        return jsonObject;
+    }
+
+
 }

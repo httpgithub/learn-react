@@ -14,6 +14,7 @@ class DashboardPage extends Component {
       <div>
         {!this.props.isConfirmed && <ConfirmEmailMessage />}
         {this.props.books.length === 0 && <AddBookCtA />}
+        { <AddBookCtA />}
       </div>
     );
   }
