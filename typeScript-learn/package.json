@@ -1,0 +1,9 @@
+{
+    "name": "react_project1",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "node-fetch": "^2.3.0"
+    }
+}
